@@ -12,6 +12,7 @@ const Login = () => {
 
 let [data, setData] = useState(defaultData);
 let [error, setError] = useState(defaultData);
+const [loading,setLoading] = useState(false)
 
 
     const handleChange = (event) => {
@@ -50,26 +51,31 @@ let [error, setError] = useState(defaultData);
     }
 
 // console.log(error)
+const handleSubmit = (event) => {
+event.preventDefault();
+}
 
 
     return (
 <div className="login-container">
       <h2>Login</h2>
-      <form  className="login-form">
+      <form  className="login-form" onSubmit={handleSubmit}>
         <input
           type="email"
           placeholder="Email"
           name="email"
          onChange={handleChange}
         />
+        <p class="fieldError">{error?.email}</p>
         <input
           type="password"
           placeholder="Password"
           name="password"
           onChange={handleChange}
          />
+         <p class="fieldError">{error?.password}</p>
         <button type="submit">
-          Login
+        {loading ? "Logging in..." : "Login"}
         </button>
       </form>
       <p>

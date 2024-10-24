@@ -1,60 +1,121 @@
+/* login.css */
 
-
-.login-container {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content */
+    justify-content: center;
+    align-items: center;
+  }
 
-    width: 100%;
-    max-width: 400px; /* Limiting max width for better mobile view */
-    margin: 50px auto; /* Center the container vertically */
-    padding: 30px; /* Increased padding for better aesthetics */
-    border: 1px solid #ccc;
+ 
+  
+  .login-container {
+    background-color: #fff;
+    padding: 2rem;
     border-radius: 10px;
-    background-color: #ffffff; /* White background for the form */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-}
-
-h2 {
-    margin-bottom: 20px; /* Space below the heading */
-    color: #333; /* Dark color for better readability */
-}
-
-.login-form input {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
-    padding: 15px; /* More padding for inputs */
-    margin: 10px 0;
-    border: 1px solid #ccc; /* Light border for input fields */
-    border-radius: 5px; /* Rounded corners for inputs */
-    font-size: 16px; /* Larger text for better accessibility */
-    transition: border-color 0.3s; /* Smooth transition for border color */
-}
-
-.login-form input:focus {
-    border-color: #007bff; /* Highlight border on focus */
-    outline: none; /* Remove default outline */
-}
-
-button {
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 2rem;
+  }
+  
+  .login-form input {
     width: 100%;
-    padding: 15px; /* More padding for the button */
-    background-color: #385F71; /* Primary color */
-    color: white;
-    border: none;
-    border-radius: 5px; /* Rounded corners for the button */
-    cursor: pointer;
-    margin: 12px 12px 12px 0px;
-    font-size: 16px; /* Larger text for better accessibility */
-    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
-}
-
-button:hover {
-    background-color: #2B4162	;
-
-}
-
-.error {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .login-form input:focus {
+    outline: none;
+    border-color: #0072FF;
+  }
+  
+  .fieldError {
     color: red;
-    margin-top: 10px; /* Space above the error message */
-    text-align: center; /* Center the error message */
-}
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  button{
+    width: 100%;
+    background-color: #385F71;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #005bb5;
+  }
+  
+  p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  p a {
+    color: #0072FF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 1.5rem;
+      max-width: 90%;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    .login-form input {
+      font-size: 0.9rem;
+    }
+  
+    button[type="submit"] {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-container {
+      padding: 1rem;
+      max-width: 95%;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .login-form input {
+      font-size: 0.8rem;
+    }
+  
+    button[type="submit"] {
+      font-size: 0.9rem;
+    }
+  }
+  

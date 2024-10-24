@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../firebase/firebase";
+import { useNavigate } from "react-router-dom";
 import "../styles/login.css"
 
 
@@ -12,8 +13,9 @@ const Login = () => {
 
 let [data, setData] = useState(defaultData);
 let [error, setError] = useState(defaultData);
+let [merror, setMError] = useState("");
 const [loading,setLoading] = useState(false)
-
+const navigate = useNavigate();
 
     const handleChange = (event) => {
         const { value, name, type } = event.target;
@@ -50,9 +52,24 @@ const [loading,setLoading] = useState(false)
         })
     }
 
-// console.log(error)
-const handleSubmit = (event) => {
+// console.log(data.password)
+
+const handleSubmit = async(event) => {
+    const {email, password} = data
+    // console.log(email)
 event.preventDefault();
+setLoading(true);
+
+    try{
+        await signInWithEmailAndPassword(auth, email, password)
+        navigate('/dashboard')
+    }catch(err) {
+        setMError("Invalid Login Credentials")
+    }finally{
+        setLoading(false)
+    }
+
+
 }
 
 
@@ -60,20 +77,21 @@ event.preventDefault();
 <div className="login-container">
       <h2>Login</h2>
       <form  className="login-form" onSubmit={handleSubmit}>
+      <p className="fieldError">{merror}</p>
         <input
           type="email"
           placeholder="Email"
           name="email"
          onChange={handleChange}
         />
-        <p class="fieldError">{error?.email}</p>
+        <p className="fieldError">{error?.email}</p>
         <input
           type="password"
           placeholder="Password"
           name="password"
           onChange={handleChange}
          />
-         <p class="fieldError">{error?.password}</p>
+         <p className="fieldError">{error?.password}</p>
         <button type="submit">
         {loading ? "Logging in..." : "Login"}
         </button>

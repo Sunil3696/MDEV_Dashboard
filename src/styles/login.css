@@ -1,0 +1,60 @@
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
+
+    width: 100%;
+    max-width: 400px; /* Limiting max width for better mobile view */
+    margin: 50px auto; /* Center the container vertically */
+    padding: 30px; /* Increased padding for better aesthetics */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff; /* White background for the form */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Dark color for better readability */
+}
+
+.login-form input {
+    width: 100%;
+    padding: 15px; /* More padding for inputs */
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Light border for input fields */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 16px; /* Larger text for better accessibility */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.login-form input:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    width: 100%;
+    padding: 15px; /* More padding for the button */
+    background-color: #385F71; /* Primary color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer;
+    margin: 12px 12px 12px 0px;
+    font-size: 16px; /* Larger text for better accessibility */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+button:hover {
+    background-color: #2B4162	;
+
+}
+
+.error {
+    color: red;
+    margin-top: 10px; /* Space above the error message */
+    text-align: center; /* Center the error message */
+}

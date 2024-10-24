@@ -1,8 +1,8 @@
 import React from "react";
 import { useAuth } from "../context/AuthContext";
-import UserProfile from "./UserProfile";
+import UserProfile from "./userprofile.widget";
 import UserList from "./userList";
-import WeatherWidget from "./WeatherWidget";
+import WeatherWidget from "./weather.widget";
 const Dashboard = () => {
     const { currentUser } = useAuth();
 return (

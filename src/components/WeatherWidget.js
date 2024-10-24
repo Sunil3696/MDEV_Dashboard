@@ -3,25 +3,42 @@ import "../styles/weatherWidget.css"
 const WeatherWidget = () => {
 
     const [weather, setWeather] = useState(null);
+    const [city,setCity] = useState('Barrie');
+    const [error, setError] = useState(null);
 
     const constantData = {
         apiKey : "8d5ba03d1366f8056e56b7c7548726e7",
-        city : "Toronto",
+
     }
 
-
     const getWeather = async (city) => {
-        console.log(city)
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${constantData.apiKey}&units=metric`);
+        if (!response.ok) {
+            if (response.status === 404) {
+              throw new Error("City not found. Please try again.");
+            } else {
+              throw new Error("Failed to fetch weather data.");
+            }
         const data = await response.json();
             setWeather(data);
     }
 
     useEffect(()=> {
-        getWeather("Kathmandu")
+        getWeather("Katmandu")
     }, [])
 
 
+    const handleChange = (event) => {
+            const CITY = event.target.value;
+            setCity(CITY);
+    }
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+        // console.log(city)
+
+        getWeather(city);
+    }
 
 
 
@@ -32,12 +49,13 @@ const WeatherWidget = () => {
         {/* Input field for city name */}
         <input
           type="text"
-   
           placeholder="Enter city name"
+          name="cityName"
+          onChange={handleChange}
         />
     
         {/* Button to trigger the weather fetch */}
-        <button className="weatherButton">Get Weather</button>
+        <button className="weatherButton" onClick={onSubmit}>Get Weather</button>
         
         {/* Display weather details */}
         {weather ? (

@@ -3,7 +3,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../firebase/firebase";
 import { useNavigate } from "react-router-dom";
 import "../styles/login.css"
-
+import { useAuth } from "../context/AuthContext";
 
 let defaultData = {
     email: "",
@@ -15,6 +15,7 @@ let [data, setData] = useState(defaultData);
 let [error, setError] = useState(defaultData);
 let [merror, setMError] = useState("");
 const [loading,setLoading] = useState(false)
+const { currentUser } = useAuth();
 const navigate = useNavigate();
 
     const handleChange = (event) => {
@@ -68,9 +69,11 @@ setLoading(true);
     }finally{
         setLoading(false)
     }
-
-
 }
+
+if (currentUser) {
+    navigate("/dashboard");
+  }
 
 
     return (

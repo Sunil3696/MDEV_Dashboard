@@ -1,10 +1,21 @@
-import React from "react";
-import { getFirestore, getDoc, collection } from "firebase/firestore";
+import React, { useEffect , useState} from "react";
+import { getFirestore, getDocs, collection } from "firebase/firestore";
+import "../styles/userList.css"
+
+
 const UserList =  () => {
     const [users, setUsers] = useState([]);
     const db = getFirestore();
 
-    
+    useEffect(() => {
+        const fetchUsers = async () => {
+            const usersCollection = collection(db, 'users');
+            const userSnapshot = await getDocs(usersCollection);
+            const userList = userSnapshot.docs.map(doc => doc.data());
+            setUsers(userList);
+        };
+        fetchUsers();
+    }, [db]);
 
 
  return (

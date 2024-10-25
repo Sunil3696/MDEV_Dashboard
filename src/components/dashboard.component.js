@@ -6,23 +6,24 @@ import WeatherWidget from "./weather.widget";
 import Stocks from "./stock.widget";
 import Quotes from "./quotes.widget";
 import Calculator from "./Calculator";
-
+import "../styles/dashboard.css"
 const Dashboard = () => {
     const { currentUser } = useAuth();
-return (
-    <div className="dashboard">
-    <h1>Dashboard</h1>
-    <div className="widgets">
-        <UserProfile />
-      <UserList/>
-      <WeatherWidget/>
-      <Stocks/>
-      <Quotes/>
-      <Calculator/>
-        {/* Add more widgets here, like news and cryptocurrency */}
-    </div>
-</div>
-)
-}
 
-export default Dashboard
+    return (
+        <div className="dashboard">
+            <h1>Dashboard</h1>
+            <div className="widgets">
+                <UserProfile />
+                <UserList />
+                <WeatherWidget />
+                <Stocks />
+                <Quotes />
+                <Calculator />
+                {/* Add more widgets here if needed */}
+            </div>
+        </div>
+    );
+};
+
+export default Dashboard;

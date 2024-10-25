@@ -1,0 +1,41 @@
+.dashboard {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items horizontally */
+    padding: 20px; /* Add padding around the dashboard */
+
+    min-height: 100vh; /* Ensure it covers the full height */
+    margin-top: 60px;
+}
+
+.dashboard h1 {
+    color: #2B4162; /* Darker title color */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.widgets {
+    display: grid; /* Use grid layout for widgets */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between widgets */
+    width: 100%; /* Full width for widgets */
+    max-width: 1200px; /* Maximum width for the dashboard */
+}
+
+.widget {
+    background-color: #ffffff; /* White background for widgets */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 20px; /* Inner padding for each widget */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.widget:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Optional: Add media queries for responsiveness */
+@media (max-width: 768px) {
+    .widgets {
+        grid-template-columns: 1fr; /* Stack all widgets on smaller screens */
+    }
+}

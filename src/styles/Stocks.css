@@ -1,0 +1,51 @@
+.stocks-news {
+    padding: 20px;
+    background-color: #f5f0f6; /* Light background for readability */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0; /* Space above and below the component */
+}
+
+.stocks-news h2 {
+    color: #2b4162; /* Darker shade for headings */
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.stocks-news ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.stocks-news li {
+    background-color: #ffffff; /* White background for each news item */
+    padding: 15px;
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between news items */
+    transition: box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+.stocks-news li:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover for interactivity */
+}
+
+.stocks-news a {
+    text-decoration: none; /* Remove underline from links */
+    color: #385f71; /* Color for links */
+    font-weight: bold; /* Bold text for links */
+}
+
+.stocks-news a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.stocks-news p {
+    color: #333; /* Dark text color for summaries */
+    margin: 5px 0; /* Space around paragraphs */
+}
+
+.stocks-news span {
+    color: #8f754f; /* Color for publication date */
+    font-size: 0.9em; /* Slightly smaller font size */
+}

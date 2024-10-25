@@ -1,0 +1,31 @@
+.quotes {
+    padding: 20px;
+    background-color: #f5f0f6; /* Light background for readability */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0; /* Space above and below the component */
+}
+
+.quotes h2 {
+    color: #2b4162; /* Darker shade for headings */
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.quotes blockquote {
+    padding: 15px;
+    border-left: 4px solid #385f71; /* Blue left border for emphasis */
+    margin: 10px 0;
+    font-style: italic; /* Italic style for quotes */
+}
+
+.quotes p {
+    color: #333; /* Dark text color for quotes */
+    margin: 0; /* No margin around the quote */
+}
+
+.quotes footer {
+    color: #8f754f; /* Color for author */
+    font-size: 0.9em; /* Slightly smaller font size */
+    text-align: right; /* Right-align the author */
+}

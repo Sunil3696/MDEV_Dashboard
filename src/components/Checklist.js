@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/checklist.css'; // Make sure to import the CSS file
 
 const Checklist = () => {
-    const [items, setItems] = useState(['Example Task 1', 'Example Task 2']);
+    const [items, setItems] = useState([]);
     const [inputValue, setInputValue] = useState('');
 
     const handleAddItem = () => {

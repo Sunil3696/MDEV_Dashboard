@@ -1,0 +1,32 @@
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f5f0f6;
+    margin: 20px 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    width: 48%;
+    padding: 10px;
+    margin: 10px 1%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    background-color: #2B4162;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,38 @@
+.sidebar {
+    width: 200px;
+    background-color: #f5f0f6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100%; /* Full height */
+    top: 20px; 
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #2B4162;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    color: #1f3152;
+}
+
+.logout-button{
+background-color:  red;
+}

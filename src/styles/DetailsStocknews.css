@@ -1,0 +1,140 @@
+.detail-weather-page {
+    display: flex;
+}
+
+/* Sidebar toggle button styling */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.sidebar-toggle.cross {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+
+.detail-weather-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 220px; 
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 70%;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    color: white;
+    background-color: #2B4162;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3a5378;
+}
+
+.weather-info {
+    text-align: left;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h3 {
+    color: #2B4162;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 1024px) {
+    .detail-weather-main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+
+    /* Sidebar visibility control */
+    .hidden {
+        display: none;
+    }
+/* Visible sidebar css*/
+    .visible {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 220px;
+        background-color: #2B4162;
+        color: white;
+        padding-top: 20px;
+        z-index: 1000;
+    }
+
+    .visible .sidebar-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .input-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .weather-info {
+        font-size: 0.9rem;
+    }
+}

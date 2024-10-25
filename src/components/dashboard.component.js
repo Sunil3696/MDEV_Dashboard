@@ -6,7 +6,9 @@ import WeatherWidget from "./weather.widget";
 import Stocks from "./stock.widget";
 import Quotes from "./quotes.widget";
 import Calculator from "./Calculator";
-import "../styles/dashboard.css"
+import Checklist from "./Checklist";
+import "../styles/dashboard.css";
+
 const Dashboard = () => {
     const { currentUser } = useAuth();
 
@@ -20,6 +22,7 @@ const Dashboard = () => {
                 <Stocks />
                 <Quotes />
                 <Calculator />
+                <Checklist />
                 {/* Add more widgets here if needed */}
             </div>
         </div>

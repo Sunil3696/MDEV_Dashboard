@@ -1,0 +1,51 @@
+.checklist {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    width: 100%; /* Full width */
+    max-width: 400px; /* Restrict maximum width for better appearance */
+}
+
+.checklist h2 {
+    text-align: center;
+}
+
+.checklist-input {
+    display: flex;
+    justify-content: center; /* Center input and button */
+    margin-bottom: 15px; /* Space between input and list */
+}
+
+.checklist-input input {
+    padding: 10px;
+    width: 70%; /* Width of input */
+    margin-right: 10px; /* Space between input and button */
+}
+
+.checklist-input button {
+    padding: 10px;
+    background-color: #2B4162;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px; /* Limit height for scroll if needed */
+    overflow-y: auto; /* Enable scrolling if the list is long */
+}
+
+li {
+    cursor: pointer;
+    padding: 5px;
+    transition: background 0.3s;
+}
+
+li:hover {
+    background-color: #d7d7d7; /* Change on hover */
+}

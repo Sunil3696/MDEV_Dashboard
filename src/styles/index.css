@@ -1,19 +1,15 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Add this line to include padding and border in element's total width and height */
+  box-sizing: border-box; /* Include padding and border in total width and height */
 }
 
 html, body {
   height: 100%; /* Ensure the body takes the full height */
-  font-family: Arial, sans-serif; /* Set a default font for the application */
+  font-family: Arial, sans-serif; /* Default font for the application */
 }
 
-/* Add more global styles as needed */
-
-.dashboard {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center align items if needed */
-  padding: 20px; /* Add padding for better spacing */
+/* Optional: Set a base font size for scaling */
+body {
+  font-size: 16px; /* Base font size */
 }
